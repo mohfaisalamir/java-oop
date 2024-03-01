@@ -1,40 +1,48 @@
 package com.tutorial;
-class Mahasiswa { // membuat kelas
-    String nama;
-    String jurusan;
-    String NIM;
-    double IPK;
-    Integer angkatan;
 
+//class tanpa constructor / class polos
+class Polos {
+    String dataString;
+    Integer dataInteger;
 }
-public class Main {
-    public static void main(String[] args) {
-        // instasnsiasi  / membuat objek
+class Mahasiswa{
+    String nama;
+    String NIM;
+    String jurusan;
+    Mahasiswa(String inputNAma, String inputNIM, String inputJurusan){
+        //adalah fungsi Baawaan(sebenrnya), yang dipanggil pertamakali ketika Objek Dibuat
+        nama=inputNAma;
+        NIM=inputNIM;
+        jurusan=inputJurusan;
+        System.out.println("Ini adalah Condtructor");
+    }
 
-        Mahasiswa mahasiswa = new Mahasiswa();
-        mahasiswa.nama      = "Imron Sofyan";
-        mahasiswa.NIM       = "3714100036";
-        mahasiswa.jurusan   = "Teknik Sipil";
-        mahasiswa.IPK       = 2.99;
-        mahasiswa.angkatan  = 2011;
-
-        System.out.println(mahasiswa.nama);
-        System.out.println(mahasiswa.NIM);
-        System.out.println(mahasiswa.jurusan);
-        System.out.println(mahasiswa.angkatan);
-        System.out.println(mahasiswa.IPK);
-
-        Mahasiswa mahasiswa1 = new Mahasiswa();
-        mahasiswa1.nama      = "Abdul Manab";
-        mahasiswa1.NIM       = "3714100034";
-        mahasiswa1.jurusan   = "Teknik Sipil";
-        mahasiswa1.IPK       = 3.67;
-        mahasiswa1.angkatan  = 2009;
-
-        System.out.println(mahasiswa1.nama);
-        System.out.println(mahasiswa1.NIM);
-        System.out.println(mahasiswa1.jurusan);
-        System.out.println(mahasiswa1.angkatan);
-        System.out.println(mahasiswa1.IPK);
+    @Override
+    public String toString() {
+        return "Mahasiswa{\n" +
+                "nama='" + nama + '\'' +
+                ", \nNIM='" + NIM + '\'' +
+                ", \njurusan='" + jurusan + '\'' +
+                '}';
     }
 }
+
+public class Main {
+        public static void main(String[] args) throws Exception {
+//            Polos objectPolos = new Polos();
+//        objectPolos.dataString="diancok";
+//        objectPolos.dataInteger=20;
+//
+//            Polos polos = new Polos();
+//        polos.dataString="PKI Jancok";
+//        polos.dataInteger=30;
+//            System.out.println(polos.dataString);
+//            System.out.println(polos.dataInteger);
+//            System.out.println(objectPolos.dataString);
+//            System.out.println(objectPolos.dataInteger);
+            Mahasiswa mahasiswa = new Mahasiswa("Gatel","900011","Kimia");
+            System.out.println(mahasiswa.toString());
+            }
+
+        }
+
