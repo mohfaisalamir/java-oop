@@ -16,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="03-pengenalan-class-dan-object" />
+        <entry key="$PROJECT_DIR$" value="04-constructor" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,7 +35,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "04-constructor",
+    "git-widget-placeholder": "05-methods",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/user/Desktop/fullstack/latihan/latihan/60-CRUD",
     "node.js.detected.package.eslint": "true",
