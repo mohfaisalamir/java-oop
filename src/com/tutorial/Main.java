@@ -15,6 +15,23 @@ class Player{
         this.name = name;
         this.health = health;
     }
+    void attack(Player opponent){
+        double attackPower = this.weapon.attackPower;
+//        attackPower = 100000; // salah satu penyakit haccking (cheating), perlu pembungkusan / enkapsulasi
+        System.out.println(this.name +" attacking "+ opponent.name+" with power "+attackPower);
+        opponent.defence(this.weapon.attackPower, this.name);
+    }
+    void defence(double attackPower,String person){
+        // sebenarnya ngambil damage ding,,
+        double damage;
+        if(this.armor.defensePower<attackPower){
+            damage = attackPower-this.armor.defensePower;
+        }else {
+            damage = 0;
+        }
+        this.health-=damage;
+        System.out.println(this.name +" gets damage "+damage+" by "+person);
+    }
     void equiptWeapon(Weapon weapon){
         this.weapon=weapon;
     }
@@ -63,7 +80,7 @@ public class Main {
         Player player2=new Player("Gundam",333);
         // membuat senjata
         Weapon pedang = new Weapon("tombak",16);
-        Weapon senpi  = new Weapon("AKB 48",23);
+        Weapon senpi  = new Weapon("AKB 48",28);
         Weapon keris  = new Weapon("Keris Empu Kepek",12);
         // membuat armor
         Armor rasukWojo= new Armor("rompi wojo",20);
@@ -72,13 +89,13 @@ public class Main {
         // menggunakan senjata
 
         // player 1
-        player.equiptWeapon(pedang);
+        player.equiptWeapon(senpi);
         player.equiptArmor(rasukWojo);
         player.display();
 
         // player 1
         player1.equiptWeapon(pedang);
-        player1.equiptArmor(rasukWojo);
+        player1.equiptArmor(tameng);
         player1.display();
 
         //player 2
@@ -86,5 +103,28 @@ public class Main {
         player2.equiptArmor(shield);
         player2.display();
 //        System.out.println("TOLOL : "+player.armor.defensePower);
+        //aktifitas
+        System.out.println("PERTEMPURAN");
+        System.out.println("\nEpisode - 1");
+        player.attack(player2);
+        player.display();
+        player2.display();
+        System.out.println("PERTEMPURAN");
+        System.out.println("\nEpisode - 2");
+        player1.attack(player);
+        player.display();
+        player1.display();
+        System.out.println("PERTEMPURAN");
+        System.out.println("\nEpisode - 3");
+        player2.attack(player1);
+        player1.display();
+        player2.display();
+        System.out.println("PERTEMPURAN");
+        System.out.println("\nEpisode - 4");
+        player.attack(player1);
+        player.display();
+        player1.display();
+
+
     }
 }
