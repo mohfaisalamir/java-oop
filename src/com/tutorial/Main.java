@@ -1,60 +1,92 @@
 package  com.tutorial;
-class Player{
-    private String nama;   // (tanpa access modifier (Privat, oblick or other)) ini default,
-    // artinya dia bisa dibaca dab bisa ditulis kapanpun.
-    public int umur; // public, bisa dibaca dan ditulis di luar kelas
-    private int health; // private, hanya bisa diakses di dalam kelas saja ,
-    // jika dipakasa maka gagal compiling alias error
 
+class Data{
+    public int intPublic;
+    private int intPrivate;
 
-    public Player(String nama, int umur, int health) {
-        this.nama = nama;
-        this.umur = umur;
-        this.health = health;
+    public Data(){
+        this.intPublic = 0;
+        this.intPrivate = 0;
     }
-    void display(){
-        // apapun yang diprivate seperti fungsi setHealth(), maka hanya bisa diakases didalam kelas seperti berikut
-        setHealth();
-        System.out.println("\nNama      : "+this.nama);
-        System.out.println("Umur        : "+this.umur);
-        System.out.println("Kesehatan   : "+this.health); //karena private
-        // maka dia hanya bisa diakases di sini (didalam kelas Player) ,
+    // Membuat Getter untukmembaca data yang di private
+    public int getIntPrivate(){
+        return this.intPrivate;
+    }
+    public void setIntPrivate(int intPrivate){
+        this.intPrivate = intPrivate;
+    }
+}
+class Lingkaran{
+    // sebenernya kita bisa mendapat data private, dengan output yang berbeda
+    // misal data asli bernilai 10, kita bisa get 5, sesuai kebutuhan, berikut adalah contohnya..
+    private double diameter;
 
+    // Getter and setter custom
+    double getJari2(){
+        return this.diameter/2;
     }
-    public void getName(String nama){
-        this.nama = nama;
+    void setJari2(double jari2){
+        this.diameter = jari2*2;
     }
-    // sekarang kita coba mem-privat-kan method (jadi ya hanya bisa dipakai di dalam kelas)
-     private void setHealth(){
-        this.health += 200;
+
+    // Getter and setter normal
+
+    double getDiameter() {
+        return diameter;
+    }
+
+    void setDiameter(double diameter) {
+        this.diameter = diameter;
+    }
+    // getter lingkatan yang di custom berupa produk ukuran multidimensi
+    double luas(){
+        return 3.14*(this.getJari2()* this.getJari2());
+    }
+    double keliling(){
+        return 3.14*this.diameter;
     }
 
 }
 public class Main {
     public static void main(String[] args) {
-        Player player = new Player("Marnox",34,22);
-        player.display();
+        // PUBLIC
+        // kita bisa akses data yang public
 
-        //DEFAULT
-//        System.out.println(player.nama); // membaca data
-//        player.nama = "Surtix"; // menulis data
-//        System.out.println(player.nama); // membaca data
-        // ini ketika player.name dipaksa, maka dia gagal compile, karena property "String name" di ubah menjadi prrivate
+        // berikut kita akan read and write menggunakan public
+        Data object = new Data();
+        object.intPublic = 20;//write
+        System.out.println("Angka Publick   : "+object.intPublic); //read
 
-        //PUBLIC
-        System.out.println(player.umur); // membaca data
-        player.umur = 33; // menulis data
-        //player.health = 12; error==> tidak bisa di compile
-        System.out.println(player.umur); // membaca data
-        //System.out.println(player.health); error==> tidak bisa di compile
-        player.display(); // meskipun didalam display() terdapa atribut Private,
-        // namun sifatnya akan mengikuti fungsi yang membawanya
-        player.getName("Muldoko");// kendati, property di ganti Private, dia tetap bisa diakses (nanti kita belajar enkapsulasi)
-        player.display();
+        // PRIVATE
+        // kita hanya bisa mengaksesnya dengan cara mengakali atau memaksanya dengan memasukannya kedalam
+        // fungsi yang bersifat public.. untuk Read Only, kita bisa pakai GETTER (sebenernya fungsi ini kita buat sendiri)
+        // ..
+        // Read by getter
+        System.out.println("Angka Private   : "+object.getIntPrivate());
+        // Write by setter (write only)
+        object.setIntPrivate(99);// tentu ini gak bisa di baca, kecuali anda return
+        //ini membaca setelah intPrivate di ubah (setting pakai setter)
+        System.out.println("\nsetelah di set  : "+object.getIntPrivate());
 
-        //player.setHealth();// gagal compile karena function saya ubah menjadi private, sehingga hanya bisa di pakai di dalam kelasnya saja..
+        // Read and rwite by Getter and setter custom
+        Lingkaran lingkaran = new Lingkaran();
+        // setter custom
+        lingkaran.setJari2(3);
+        // getter Normal
+        System.out.println("\nGetter Normal   : "+lingkaran.getDiameter()); // hasil 6
 
+        //setter normal
+        lingkaran.setDiameter(10);
+        //Getter Custom
+        System.out.println("Getter Custom   : "+lingkaran.getJari2()); // hasil 2.5
 
+        // getter lingkatan yang di custom berupa produk ukuran multidimensi
+        System.out.println("\nLuas dari diameter  terakhir(10)    : "+lingkaran.luas());
+        System.out.println("Keliling dari diameter  terakhir(10): "+lingkaran.keliling()+"\n jari jari "+lingkaran.getJari2() + "\n diameter "+lingkaran.getDiameter() );
+
+        // oke, sekali lagi, selain untuk read and write only dari data yang di private
+        // dia juga bisa mengembalikan nilai sesuai kehendak kita, dan  bisam men-set nilai dengan imput namun yang disimpan di memori variabel bernilai berbeda
+        // misal kita set 4 tapi yang disimpan 2 atau 8..
 
     }
 }
