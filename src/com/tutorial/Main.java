@@ -1,92 +1,97 @@
-package  com.tutorial;
+package com.tutorial;
 
-class Data{
-    public int intPublic;
-    private int intPrivate;
-
-    public Data(){
-        this.intPublic = 0;
-        this.intPrivate = 0;
+class Player{
+    private String name;
+    private int baseAttack;
+    private int baseHealth;
+    private Armor armor;
+    private Weapon weapon;
+    private int level;
+    private int incrementAttack;
+    private int incementHealth;
+    public Player(String name){
+        this.name = name;
+        this.baseAttack = 210;
+        this.baseHealth = 100;
+        this.level = 1;
+        this.incrementAttack = 22;
+        this.incementHealth = 20;
     }
-    // Membuat Getter untukmembaca data yang di private
-    public int getIntPrivate(){
-        return this.intPrivate;
+    void display(){
+        System.out.println("\nPlayer\t\t\t: "+this.name);
+        System.out.println("Level\t\t\t: "+this.level);
+        System.out.println("Maximum Health\t: "+this.maxHealth());
+        System.out.println("Maximum Attack\t: "+this.getAttackPower());
     }
-    public void setIntPrivate(int intPrivate){
-        this.intPrivate = intPrivate;
+    void setArmor(Armor armor){
+        this.armor = armor;
+    }
+    void setWeapon(Weapon weapon){
+        this.weapon=weapon;
+    }
+    int getAttack(){
+        return this.baseAttack;
+    }
+    public int maxHealth(){
+        return this.baseHealth +this.level * this.incementHealth + this.armor.getAddHealth();
+    }
+    public int getAttackPower(){
+        return this.baseAttack + this.level * this.incrementAttack + this.weapon.getAttack();
+    }
+    public void levelUp(){
+        this.level++;
     }
 }
-class Lingkaran{
-    // sebenernya kita bisa mendapat data private, dengan output yang berbeda
-    // misal data asli bernilai 10, kita bisa get 5, sesuai kebutuhan, berikut adalah contohnya..
-    private double diameter;
-
-    // Getter and setter custom
-    double getJari2(){
-        return this.diameter/2;
+class Weapon{
+    private String name;
+    private int attack;
+    public Weapon(String name, int attack){
+        this.name = name;
+        this.attack = attack;
     }
-    void setJari2(double jari2){
-        this.diameter = jari2*2;
+    public int getAttack(){
+        return this.attack;
     }
-
-    // Getter and setter normal
-
-    double getDiameter() {
-        return diameter;
+}
+class Armor{
+    private String name;
+    private int strength;
+    private int health;
+    public Armor(String name, int strength, int health){
+        this.name = name;
+        this.strength = strength;
+        this.health=health;
     }
-
-    void setDiameter(double diameter) {
-        this.diameter = diameter;
+    public int getAddHealth(){
+        return this.health + this.strength * 10;
     }
-    // getter lingkatan yang di custom berupa produk ukuran multidimensi
-    double luas(){
-        return 3.14*(this.getJari2()* this.getJari2());
-    }
-    double keliling(){
-        return 3.14*this.diameter;
-    }
-
 }
 public class Main {
     public static void main(String[] args) {
-        // PUBLIC
-        // kita bisa akses data yang public
+        Player player = new Player("Muldoko");
+        Player player1=new Player("Minak Jinggo");
+        // player.baseHealth; karena di-private ini tak bisa di compile
+        Weapon weapon1 = new Weapon("Paser Loro",18);
+        Armor armor1 = new Armor("Kutang Wojo",16,399);
+        player1.setArmor(armor1);
+        player1.setWeapon(weapon1);
+        player1.display(); // sebelum level up
+        player1.levelUp();// setelah level up
+        player1.levelUp();
+        player1.levelUp();
+        player1.display(); //< == line ini
+        //player.baseHealth = 0; tetep gak bisa, harus buatkan fungsi yang public
+        Weapon weapon = new Weapon("tepel Manunggal", 21);
+        Armor armor = new Armor("rasuk Wojo",9,666);
 
-        // berikut kita akan read and write menggunakan public
-        Data object = new Data();
-        object.intPublic = 20;//write
-        System.out.println("Angka Publick   : "+object.intPublic); //read
-
-        // PRIVATE
-        // kita hanya bisa mengaksesnya dengan cara mengakali atau memaksanya dengan memasukannya kedalam
-        // fungsi yang bersifat public.. untuk Read Only, kita bisa pakai GETTER (sebenernya fungsi ini kita buat sendiri)
-        // ..
-        // Read by getter
-        System.out.println("Angka Private   : "+object.getIntPrivate());
-        // Write by setter (write only)
-        object.setIntPrivate(99);// tentu ini gak bisa di baca, kecuali anda return
-        //ini membaca setelah intPrivate di ubah (setting pakai setter)
-        System.out.println("\nsetelah di set  : "+object.getIntPrivate());
-
-        // Read and rwite by Getter and setter custom
-        Lingkaran lingkaran = new Lingkaran();
-        // setter custom
-        lingkaran.setJari2(3);
-        // getter Normal
-        System.out.println("\nGetter Normal   : "+lingkaran.getDiameter()); // hasil 6
-
-        //setter normal
-        lingkaran.setDiameter(10);
-        //Getter Custom
-        System.out.println("Getter Custom   : "+lingkaran.getJari2()); // hasil 2.5
-
-        // getter lingkatan yang di custom berupa produk ukuran multidimensi
-        System.out.println("\nLuas dari diameter  terakhir(10)    : "+lingkaran.luas());
-        System.out.println("Keliling dari diameter  terakhir(10): "+lingkaran.keliling()+"\n jari jari "+lingkaran.getJari2() + "\n diameter "+lingkaran.getDiameter() );
-
-        // oke, sekali lagi, selain untuk read and write only dari data yang di private
-        // dia juga bisa mengembalikan nilai sesuai kehendak kita, dan  bisam men-set nilai dengan imput namun yang disimpan di memori variabel bernilai berbeda
-        // misal kita set 4 tapi yang disimpan 2 atau 8..
-
+        player.setWeapon(weapon);
+        player.setArmor(armor);
+        player.display();
+        player.levelUp();
+        player.display();
+        // coba lij=hat hasil perubahan
+        
+        // PR : coba bikin saling serang, saat player (A) menyerang player(B) lain,
+        // maka A naik satu level
     }
 }
