@@ -1,5 +1,7 @@
 package com.tutorial;
 
+import java.util.Scanner;
+
 class Player{
     private String name;
     private int baseAttack;
@@ -41,6 +43,12 @@ class Player{
     public void levelUp(){
         this.level++;
     }
+    public void attacking (Player opponent){
+        System.out.println(this.name +" Attacking "+opponent.name);
+        int opponentLostPower = this.maxHealth()-opponent.maxHealth();
+        opponent.baseAttack = opponentLostPower;
+
+    }
 }
 class Weapon{
     private String name;
@@ -68,6 +76,7 @@ class Armor{
 }
 public class Main {
     public static void main(String[] args) {
+
         Player player = new Player("Muldoko");
         Player player1=new Player("Minak Jinggo");
         // player.baseHealth; karena di-private ini tak bisa di compile
@@ -90,8 +99,19 @@ public class Main {
         player.levelUp();
         player.display();
         // coba lij=hat hasil perubahan
-        
+
         // PR : coba bikin saling serang, saat player (A) menyerang player(B) lain,
         // maka A naik satu level
+
+        //PR aku garap seara sederhana belum kompleks.. intinya players saling serang.
+        System.out.println("\n DANCOK");
+        player.display();
+        player1.display();
+        player.attacking(player1);
+        player1.attacking(player);
+        player.display();
+        player1.display();
     }
 }
+
+
