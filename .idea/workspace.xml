@@ -35,7 +35,7 @@
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;11-encapsulation-exercise-part-1&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;12-encapsulation-exercise-part-2&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/user/Desktop/fullstack/latihan/latihan/60-CRUD&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -88,6 +88,7 @@
       <workItem from="1710128231432" duration="596000" />
       <workItem from="1710140681132" duration="1912000" />
       <workItem from="1710226896881" duration="7221000" />
+      <workItem from="1710649216561" duration="8342000" />
     </task>
     <servers />
   </component>
