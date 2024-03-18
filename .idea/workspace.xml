@@ -35,7 +35,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "13-static-atau-class-attributes",
+    "git-widget-placeholder": "14-static-atau-class-methods",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/user/Desktop/fullstack/latihan/latihan/60-CRUD",
     "node.js.detected.package.eslint": "true",
@@ -89,7 +89,7 @@
       <workItem from="1710140681132" duration="1912000" />
       <workItem from="1710226896881" duration="7221000" />
       <workItem from="1710649216561" duration="9286000" />
-      <workItem from="1710694140498" duration="3584000" />
+      <workItem from="1710694140498" duration="6966000" />
     </task>
     <servers />
   </component>
