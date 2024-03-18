@@ -34,7 +34,7 @@ class Main{
         Player player3 = new Player ("Abbas");
         Player player4 = new Player ("Sufyan");
         Player player5 = new Player ("Hindun");
-        // untuk mengambik nama nama tersebut ksn susah sehingga perlu dibuat ArrayList (materi kedepan seharusnya)
+        // untuk mengambil nama nama tersebut kan susah sehingga perlu dibuat ArrayList (ArrayList ini, materi kedepan seharusnya)
 
         player2.show();
         Player.shownumberOfPlayer();
