@@ -2,6 +2,7 @@ package com.tutorial;
 
 
 import com.terminal.Console; // ini harus impor, jika tiddak maka tidak dapat di compile
+// untuk file yang masih satu package, maka tidak perlu impor ..
 
 class Main{
     public static void main(String[] args) {

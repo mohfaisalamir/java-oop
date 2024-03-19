@@ -1,4 +1,4 @@
-package com.tutorial;
+package com.tutorial;//// untuk file yang masih satu package, maka tidak perlu impor ..
 // ini  masih di satu package, jadi masih luwes bisa diakses,
 // sebenernya masih bisa meski file ada di luar package, namun dengan perlakuan tertentu,
 // seperti pe-impor-an..
