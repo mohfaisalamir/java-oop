@@ -1,6 +1,8 @@
 package com.terminal;
 
 public class Console { // kenapa public kali ini di tampilkan? ya, kita akan lanjutkan di pembelajaran selanjutnya
+    // public ini agar bisa di ekspor ke lain package, jika tidak di public maka tidak visible (gak terdetek)
+    // maka jika di run fungsi ini pada file di package lain terjadi error, karena dianggap proram asing (tak dapat dicompile)..
     public static void cetak(String mokak){
         System.out.println(mokak);
     }
