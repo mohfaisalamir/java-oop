@@ -1,22 +1,34 @@
 package com.tutorial;
+// ini mengimpor class console/terminal
+import com.terminal.console;
+import com.terminal.terminal;
+// sekarang mengimpur static method dari console
+import static com.terminal.console.log;
 
 
-import com.terminal.Console; // ini harus impor, jika tiddak maka tidak dapat di compile
-// untuk file yang masih satu package, maka tidak perlu impor ..
+//class Mainan dan Mainan2 hanya numpang lapak, jangan di hiraukan
 
-class Main{
+public class Main{ // nah, misal class Main ini bisa , karena sama dengan nama file, ini bisa default maupun public
+    // class yang paling lazim adalah default dan public, tidak ada class private
+    //1. default hanya visible di package yang sama , contohnya seperti di "class Player"
+    //2. public dapat visible di package yang beda, namun tetep di beri keyword "import" bagi pengimportnya
     public static void main(String[] args) {
         Player player = new Player("Mustoko");
-        Player player1 = new Player("Mukito");
-        Player player2 = new Player("Muldoko");
         player.show();
-        player1.show();
-        player2.show();
-        Console.cetak("\nDiancok");
-        Console.log("Kok isoooo");// heheh pura pura nge-javaScript, padahal ini Class.funtion
-        Console.cetak("mangan");
-        Console.log("luwe");
-        Console.print("mangan");// ini bukti jika petunjuk "message" tak ditampilkan
 
+        console.log("\nKok isoo");
+        console.log("The Player Name is "+player.getName());
+        //terminal.log() terminal di class console tidak bisa diakses karena dia bukan public (default) karena berada di class console
+        // dan public class tidak boleh lebih dari satu dari suatu file
+        // kecuali anda pindahkan si germinal menjadi kelas baru,
+        // seperti berikut ..
+        terminal.log("terminal log, ini dari class terminal tersendiri"); // ini selamanya tidak dapat diakses, meskipun diiport, karena bersifat default, harus di public terlebih dahulu
+        log("\nini kita coba pakai/ panggil static method ,\n" +
+                "ini tanpa nempel di console karena pakai static,\n" +
+                "dan ini hasilnya : ==> "+player.getName());
     }
 }
+
+// penggunaan private ini tidak di perkenankan
+// private class Test{
+//}
