@@ -1,34 +1,44 @@
 package com.tutorial;
-// ini mengimpor class console/terminal
-import com.terminal.console;
-import com.terminal.terminal;
-// sekarang mengimpur static method dari console
-import static com.terminal.console.log;
 
+import com.print.console;
+/*Overload Constructor:
 
-//class Mainan dan Mainan2 hanya numpang lapak, jangan di hiraukan
+Overload Constructor terjadi ketika sebuah kelas memiliki beberapa konstruktor dengan parameter yang berbeda.
+Setiap konstruktor memiliki daftar parameter yang berbeda atau jumlah parameter yang berbeda atau keduanya.
+Saat Anda membuat objek dari kelas tersebut, Anda dapat memilih konstruktor yang sesuai dengan kebutuhan Anda berdasarkan parameter yang Anda berikan saat membuat objek tersebut.
+Contoh: dalam kelas Player, Anda dapat memiliki beberapa konstruktor yang menerima berbagai macam parameter, seperti Player(String name) dan Player(String name, int age).
+Overload Method:
 
-public class Main{ // nah, misal class Main ini bisa , karena sama dengan nama file, ini bisa default maupun public
-    // class yang paling lazim adalah default dan public, tidak ada class private
-    //1. default hanya visible di package yang sama , contohnya seperti di "class Player"
-    //2. public dapat visible di package yang beda, namun tetep di beri keyword "import" bagi pengimportnya
+Overload Method terjadi ketika sebuah kelas memiliki beberapa metode dengan nama yang sama tetapi dengan parameter yang berbeda.
+Metode-metode ini dapat memiliki jumlah parameter yang berbeda, tipe parameter yang berbeda, atau keduanya.
+Saat Anda memanggil metode tersebut, pemanggilan metode yang tepat akan dipilih oleh Java berdasarkan argumen yang Anda berikan.
+Contoh: dalam kelas Calculator, Anda dapat memiliki beberapa metode add, satu mungkin menerima dua integer, yang lain mungkin menerima dua double, dan yang lain mungkin menerima tiga integer.*/
+
+public class Main{
     public static void main(String[] args) {
-        Player player = new Player("Mustoko");
-        player.show();
+        //
+        System.out.println("\n oerload pada constructor");
+        Player player1= new Player();
+        Player player = new Player("Amrullah");
+        Player player3= new Player("Hamka");
+        Player player2= new Player();
 
-        console.log("\nKok isoo");
-        console.log("The Player Name is "+player.getName());
-        //terminal.log() terminal di class console tidak bisa diakses karena dia bukan public (default) karena berada di class console
-        // dan public class tidak boleh lebih dari satu dari suatu file
-        // kecuali anda pindahkan si germinal menjadi kelas baru,
-        // seperti berikut ..
-        terminal.log("terminal log, ini dari class terminal tersendiri"); // ini selamanya tidak dapat diakses, meskipun diiport, karena bersifat default, harus di public terlebih dahulu
-        log("\nini kita coba pakai/ panggil static method ,\n" +
-                "ini tanpa nempel di console karena pakai static,\n" +
-                "dan ini hasilnya : ==> "+player.getName());
+        player.show();
+        player1.show();
+        player2.show();
+        player3.show();
+        console.log("\ntai");
+
+        System.out.println("\n oerload pada method");
+        // satu fungsi beda cara, atau beda argumen.
+        int jumlah = Math.hitung(2,9);
+        System.out.println("int : "+jumlah);
+        double jumlah1 = Math.hitung2(1.5, 2);
+        System.out.println("double int : "+jumlah1);
+        double jumlah2 = Math.hitung3(1.2,4.8);
+        System.out.println("double double : "+jumlah2);
+        String jumlah3 = Math.hitung4("String int : ",12);
+        System.out.println(jumlah3);
+        String jumlah4 = Math.hitung5("String dan ","String");
     }
 }
-
-// penggunaan private ini tidak di perkenankan
-// private class Test{
-//}

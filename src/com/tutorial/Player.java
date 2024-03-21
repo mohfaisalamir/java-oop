@@ -1,31 +1,28 @@
-package com.tutorial;//// untuk file yang masih satu package, maka tidak perlu impor ..
-// ini  masih di satu package, jadi masih luwes bisa diakses,
-// sebenernya masih bisa meski file ada di luar package, namun dengan perlakuan tertentu,
-// seperti pe-impor-an..
+package com.tutorial;
+import com.print.console;
 
-import com.terminal.console;
-import com.terminal.terminal;
-
-// visibility default
-class Player{ // nama class ini harus sama  dengan nama filenya
+public class Player {
+    private static int jumlahPlayer;
     private String name;
 
+
+    //overloading constructor
+    // overloading, memiliki constructor/method yang sama tapi perlakuan berbeda
+    // opsi 1
     Player(String name){
+        this.jumlahPlayer++;
         this.name = name;
     }
-    void setName(String name){
-        this.name = name;
-    }
-    String getName(){
-        return  this.name;
-    }
-    // kita buktikan bahwa clas console bisa diakses dimana pun , kita ganti sout menjadi console.log
-    void show(){
-        //System.out.println("Name Player is , "+ this.name); // kita komen kita ganiti class.func ==> console.log
-        console.log("\nName Player is , "+ this.name);
-        console.log("\nNjajal ngakses class console log, \nnjajal manfaat keyword\"public\"");
-        // kita coba class terminal
-        terminal.log("nyoba treminal di class Player");
+    // opsi 2
+    Player(){
+        this.jumlahPlayer++;
+        this.name = "Karim"+jumlahPlayer;
     }
 
+    public String getName(){
+        return  this.name;
+    }
+    public  void show(){
+        console.log("Nama : "+this.name);
+    }
 }
