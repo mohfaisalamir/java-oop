@@ -1,44 +1,57 @@
 package com.tutorial;
+// inharitance adalah hubungan is-a, bingung? jadi gini misal ==> HeroStrength is-a Hero,
+// Dog is-a Animal..
 
+import com.animal.Banteng;
+import com.animal.Girafe;
+import com.animal.Tiger;
 import com.print.console;
-/*Overload Constructor:
+// Super class, Parent class, Bsae class
+class Hero{
+    String name; // oke, kita tambah Method
+    void display(){console.log("Name Hero : "+this.name);
 
-Overload Constructor terjadi ketika sebuah kelas memiliki beberapa konstruktor dengan parameter yang berbeda.
-Setiap konstruktor memiliki daftar parameter yang berbeda atau jumlah parameter yang berbeda atau keduanya.
-Saat Anda membuat objek dari kelas tersebut, Anda dapat memilih konstruktor yang sesuai dengan kebutuhan Anda berdasarkan parameter yang Anda berikan saat membuat objek tersebut.
-Contoh: dalam kelas Player, Anda dapat memiliki beberapa konstruktor yang menerima berbagai macam parameter, seperti Player(String name) dan Player(String name, int age).
-Overload Method:
+    }
+}
+//Sub class, Child class, Derived class
+class HeroStrength extends Hero{ // ini opsi bukan  kita pelajari di bab ini (inheritance, extend)
+    // String name; // ini opsi bukan yang kita pelajari di bab ini
+}
+class HeroIntelligent extends Hero{
 
-Overload Method terjadi ketika sebuah kelas memiliki beberapa metode dengan nama yang sama tetapi dengan parameter yang berbeda.
-Metode-metode ini dapat memiliki jumlah parameter yang berbeda, tipe parameter yang berbeda, atau keduanya.
-Saat Anda memanggil metode tersebut, pemanggilan metode yang tepat akan dipilih oleh Java berdasarkan argumen yang Anda berikan.
-Contoh: dalam kelas Calculator, Anda dapat memiliki beberapa metode add, satu mungkin menerima dua integer, yang lain mungkin menerima dua double, dan yang lain mungkin menerima tiga integer.*/
+}
 
-public class Main{
+public class Main {
     public static void main(String[] args) {
-        //
-        System.out.println("\n oerload pada constructor");
-        Player player1= new Player();
-        Player player = new Player("Amrullah");
-        Player player3= new Player("Hamka");
-        Player player2= new Player();
+        Hero hero = new Hero();
+        hero.name = "Ali Mustopo";
+        console.log("Name Hero : "+hero.name);
 
-        player.show();
-        player1.show();
-        player2.show();
-        player3.show();
-        console.log("\ntai");
+        HeroStrength hero2 = new HeroStrength();
+        hero2.name = "Sultan Murad I"; // ya error, tamnah atribut String name pada class HeroStrengt, atau extend ke Hero
+        System.out.println("Name Hero : "+hero2.name);
 
-        System.out.println("\n oerload pada method");
-        // satu fungsi beda cara, atau beda argumen.
-        int jumlah = Math.hitung(2,9);
-        System.out.println("int : "+jumlah);
-        double jumlah1 = Math.hitung2(1.5, 2);
-        System.out.println("double int : "+jumlah1);
-        double jumlah2 = Math.hitung3(1.2,4.8);
-        System.out.println("double double : "+jumlah2);
-        String jumlah3 = Math.hitung4("String int : ",12);
-        System.out.println(jumlah3);
-        String jumlah4 = Math.hitung5("String dan ","String");
+        HeroIntelligent hero3 = new HeroIntelligent();
+        hero3.name = "Bonaparte";
+        System.out.println("Name Hero : "+hero3.name);
+
+        System.out.println("\ndisplay by Method from extends Hero : ");
+        hero.display();
+        hero2.display();
+        hero3.display();
+
+        System.out.println("\nDunia binatang");
+        Tiger animal = new Tiger();
+        animal.setName("Panthera Trigis");
+        Girafe animal1= new Girafe();
+        animal1.setName("Jerapah Kongo");
+        Banteng animal2=new Banteng();
+        animal2.setName("Bos Javanicus");
+
+        animal.display();
+        animal1.display();
+        animal2.display();
+
+        //setelah ini kita akan belajar overiding, dimana si child dapat mengubah sifat sifat dari parentnya..
     }
 }
