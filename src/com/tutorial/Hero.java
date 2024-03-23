@@ -17,11 +17,17 @@ public class Hero {
         System.out.println("Attack      : "+this.attackPower);
         System.out.println("Health      : "+this.health);
     }
-    void attack(Hero enemy){
+    void attack(Hero enemy){ // Hero, karenia dia super class, maka dia bisa menerima Argumen manapun asal berasal dari ojeknya sendiri (Hero)
+        // atau  turunannya (HeroTrength)
         System.out.println("\n" + this.name + " Attack " + enemy.name);
         enemy.takeDamage(this.attackPower);
     }
-    /*void attack(HeroStrength enemy){ // konsep ini akan dipelajari di polymorphisme
+  /*  void attack(HeroStrength enemy){
+  // konsep ini dipelajari di polymorphisme,
+  // jadi, ini akan terjadi Error jika menerima Argument Hero, sebab :
+  // Hero(superClass) bukan turunan, sehingga objectnya tidak bisa memakai parameter HeroStrength (subclass),jika dipakasa maka error (uncompiled)
+  // maka parameter HeroStrength hanya bisa menerima argumen object HeroHerostrength(dirinya sendiri)
+
         System.out.println("\n" + this.name + " Attack " + enemy.name);
         enemy.takeDamage(this.attackPower);
     }*/
