@@ -1,0 +1,42 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"584a0b7b-ed49-42d4-a870-96cb75bba354\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/com/tutorial/Hero.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/com/tutorial/Hero.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/com/tutorial/HeroStrength.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/com/tutorial/HeroStrength.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/com/tutorial/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/com/tutorial/Main.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"16-hierarchy-package-default-publi-static\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 6\n}</component>\n  <component name=\"ProjectId\" id=\"2czFRgP1CDBLf2Ua9XpgIGMkNDn\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.Main (1).executor\": \"Run\",\n    \"Application.Main.executor\": \"Run\",\n    \"Application.Mainan.executor\": \"Run\",\n    \"Application.Mainan2.executor\": \"Run\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"21-subclass-constructor-inheritance\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"/home/user/Desktop/fullstack/latihan/latihan/60-CRUD\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.tutorial.Main\" />\n      <module name=\"oop\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"jdk-21.0.1-openjdk-21.0.1-f644763e9732-76dd8dae\" />\n        <option value=\"jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"584a0b7b-ed49-42d4-a870-96cb75bba354\" name=\"Changes\" comment=\"\" />\n      <created>1709106494421</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1709106494421</updated>\n      <workItem from=\"1709106496082\" duration=\"4661000\" />\n      <workItem from=\"1709649424112\" duration=\"5725000\" />\n      <workItem from=\"1709864404785\" duration=\"5221000\" />\n      <workItem from=\"1709936477120\" duration=\"6084000\" />\n      <workItem from=\"1710065860468\" duration=\"1583000\" />\n      <workItem from=\"1710128231432\" duration=\"596000\" />\n      <workItem from=\"1710140681132\" duration=\"1912000\" />\n      <workItem from=\"1710226896881\" duration=\"7221000\" />\n      <workItem from=\"1710649216561\" duration=\"9286000\" />\n      <workItem from=\"1710694140498\" duration=\"34462000\" />\n      <workItem from=\"1711076664835\" duration=\"9238000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,12 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="584a0b7b-ed49-42d4-a870-96cb75bba354" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/com/tutorial/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/Hero.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/com/tutorial/HeroStrength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/HeroStrength.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/com/tutorial/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/Main.java" afterDir="false" />
+-    </list>
++    <list default="true" id="584a0b7b-ed49-42d4-a870-96cb75bba354" name="Changes" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -25,7 +20,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="16-hierarchy-package-default-publi-static" />
++        <entry key="$PROJECT_DIR$" value="22-inheritance-practice" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -99,7 +94,7 @@
+       <workItem from="1710226896881" duration="7221000" />
+       <workItem from="1710649216561" duration="9286000" />
+       <workItem from="1710694140498" duration="34462000" />
+-      <workItem from="1711076664835" duration="9238000" />
++      <workItem from="1711076664835" duration="9558000" />
+     </task>
+     <servers />
+   </component>
