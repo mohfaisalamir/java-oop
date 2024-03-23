@@ -1,11 +1,12 @@
 package com.tutorial;
 
-import com.print.console;
-
 public class Hero {
-    String name;
-
-    void display(){
-        console.log("Hero Name   : "+this.name);
+    String name = "Class Hero";
+    void display (){
+        System.out.println("Name Hero is : "+this.name);
+    }
+    // dummy method
+    void dummyMethod(){
+        System.out.println("Dummy Method Hero");
     }
 }
