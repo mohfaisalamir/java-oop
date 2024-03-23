@@ -1,7 +1,8 @@
 package com.tutorial;
-public class HeroStrength extends  Hero{
-    String type = "Strength";
-    HeroStrength(String name){
+
+public class HeroIntel extends Hero{
+    String type = "Intel";
+    HeroIntel(String name){
         super(name);
     }
     @Override
@@ -10,6 +11,7 @@ public class HeroStrength extends  Hero{
         System.out.println("Type\t:\t" + this.type);
 
     }
-
-
+    void showOff(){
+        System.out.println("Saya Hero intel");
+    }
 }

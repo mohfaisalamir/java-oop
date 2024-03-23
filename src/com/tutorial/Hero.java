@@ -1,33 +1,18 @@
 package com.tutorial;
-
 public class Hero {
     String name;
-    double attackPower, health;
-    Hero(String nameInput, double attackInput, double healthInput){
-        this.name = nameInput;
-        this.attackPower = attackInput;
-        this.health = healthInput;
-    }
-    //constructor polosan, (nama doang)
     Hero(String name){
         this.name = name;
     }
+
     void display(){
-        System.out.println("\nName      : "+this.name);
-        System.out.println("Attack      : "+this.attackPower);
-        System.out.println("Health      : "+this.health);
+        System.out.println("Name\t:\t" + this.name);
     }
-    void attack(Hero enemy){
-        System.out.println("\n" + this.name + " Attack " + enemy.name);
-        enemy.takeDamage(this.attackPower);
-    }
-    /*void attack(HeroStrength enemy){ // konsep ini akan dipelajari di polymorphisme
-        System.out.println("\n" + this.name + " Attack " + enemy.name);
-        enemy.takeDamage(this.attackPower);
-    }*/
-    void takeDamage(double damage){
-        System.out.println(this.name + " Receive damage " + damage );
-        this.health = this.health - damage;
+    // ini guananya PolyMorphism
+    // jika ada attack maka semua argumen bisa masuk asal emrupakan obecet turunan dari parent yang sama
+    // misal
+    void attack(Hero enemy /*, IAttack serangan*/){ // IAattack ini bisa semua serangan, attack, criticalDamage, skill, shotDamage dll
+        System.out.println(this.name + " Attackin " + enemy.name);
     }
 
 }
