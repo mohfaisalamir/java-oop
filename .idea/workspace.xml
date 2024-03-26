@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="584a0b7b-ed49-42d4-a870-96cb75bba354" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/tutorial/HeroAgility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tutorial/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tutorial/HeroAgility.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tutorial/HeroIntel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/HeroIntel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tutorial/HeroStrength.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tutorial/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +48,7 @@
     "Application.Mainan2.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "24-final-public-private-keywords-Inheritance",
+    "git-widget-placeholder": "25-object-casting",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/user/Desktop/fullstack/latihan/latihan/60-CRUD",
     "node.js.detected.package.eslint": "true",
@@ -117,7 +116,7 @@
       <workItem from="1710649216561" duration="9286000" />
       <workItem from="1710694140498" duration="34462000" />
       <workItem from="1711076664835" duration="5235000" />
-      <workItem from="1711321117937" duration="6018000" />
+      <workItem from="1711321117937" duration="12387000" />
     </task>
     <servers />
   </component>
