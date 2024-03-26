@@ -1,18 +1,30 @@
 package com.tutorial;
 public class Hero {
-    String name;
-    Hero(String name){
+    public String name;
+    private double health;
+    //constructor
+    Hero(String name, double health){
         this.name = name;
+        this.health = health;
+    }
+    // getter
+    public double getHealth(){ // baik public maupun default, untuk method sejauh ini masih aman, jika dipakai di file/class/subclass lain.
+        // dan jangan pakai private, buat apa getter tapi tak dapat diakses?, ini menyalahi tujuan ..
+        return this.health;
+    }
+    public void display(){
+        System.out.println(this.name +" mempunyai kesehatan sebesar "+this.health);
     }
 
-    void display(){
-        System.out.println("Name\t:\t" + this.name);
+    // setter, ini akan diturunkan (inherit)
+    final  void  setHealth(double newHealth){
+        this.health = newHealth;
     }
-    // ini guananya PolyMorphism
-    // jika ada attack maka semua argumen bisa masuk asal emrupakan obecet turunan dari parent yang sama
-    // misal
-    void attack(Hero enemy /*, IAttack serangan*/){ // IAattack ini bisa semua serangan, attack, criticalDamage, skill, shotDamage dll
-        System.out.println(this.name + " Attackin " + enemy.name);
-    }
+//    mencoba meng-overload final
+    final  void  setHealth(String newHealth){
+        if (newHealth.equals("reset")){
+            this.health = 40;
+        }
+}
 
 }
